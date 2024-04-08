@@ -1,0 +1,59 @@
+@import './variables';
+@import './mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.App {
+    font-family: "Bebas Neue", sans-serif;
+
+    h1, h2, .navbar-brand {
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    h1 {
+        font-size: 7rem;
+
+        @include extralarge {
+            font-size: 5rem;
+        }
+
+        @include large {
+            font-size: 4rem;
+        }
+    }
+
+    h2 {
+        font-size: 6rem;
+
+        @include extralarge {
+            font-size: 4rem;
+        }
+    }
+
+    h3 {
+        font-size: 3rem;
+
+        @include extralarge {
+            font-size: 2rem;
+        }
+    }
+
+    .card {
+        overflow-x: hidden;
+
+        .card-img-top {
+            transition: all 0.3s;
+
+            &:hover {
+                cursor: pointer;
+                scale: 1.1;
+                opacity: 0.75;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+$primary: #712cf9;
+
+@import '~bootstrap/scss/bootstrap.scss';
